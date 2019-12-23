@@ -15,9 +15,9 @@ int main(){
     int automaticThree = 0;
 
     /*Объявление динамических переменных*/
-    int *dynamicOne = new int[1];
-    int *dynamicTwo = new int[1];
-    int *dynamicThree = new int[1];
+    int *dynamicOne = new int;
+    int *dynamicTwo = new int;
+    int *dynamicThree = new int;
 
     /*Вывод*/
     cout << "Global Variables:\n";

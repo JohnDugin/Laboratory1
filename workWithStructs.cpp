@@ -1,39 +1,40 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 /*Объявление структур*/
 
-/*Не упорядоченная, без выравнивания*/
+/*Не упорядоченная, с выравниванием*/
 struct StructFirst{
-    char Char;
+    bool Bool;
     int Int;
     short Short;
     double Double;
 };
 
-/*Упорядоченная, без выравнивания*/
+/*Упорядоченная, с выравниванием*/
 struct StructSecond{
-    char Char;
+    bool Bool;
     short Short;
     int Int;
     double Double;
 };
 
-/*Не упорядоченная, с выравниванем*/
+/*Не упорядоченная, без выравнивания*/
 #pragma pack(push,1)
 struct StructThird{
     double Double;
-    char Char;
+    bool Bool;
     int Int;
     short Short;
 };
 #pragma pack(pop)
 
-/*Упорядоченная, c выравнивания*/
+/*Упорядоченная, без выравнивания*/
 #pragma pack(push,1)
 struct StructFourth{
-    char Char;
+    bool Bool;
     short Short;
     int Int;
     double Double;
@@ -45,7 +46,7 @@ int main(){
     /*Вывод*/
     StructFirst structFirst;
     cout << "Struct 1:\n";
-    cout << "Size - char: " << sizeof(structFirst.Char) << " - " << &structFirst.Char<< "\n";
+    cout << "Size - bool: " << sizeof(structFirst.Bool) << " - " << &structFirst.Bool<< "\n";
     cout << "Size - short: " << sizeof(structFirst.Short) << " - " << &structFirst.Short << "\n";
     cout << "Size - int: " << sizeof(structFirst.Int) << " - " << &structFirst.Int << "\n";
     cout << "Size - double: " << sizeof(structFirst.Double) << " - " << &structFirst.Double << "\n";
@@ -53,7 +54,7 @@ int main(){
 
     StructSecond structSecond;
     cout << "Struct 2:\n";
-    cout << "Size - char: " << sizeof(structSecond.Char) << " - " << &structSecond.Char << "\n";
+    cout << "Size - bool: " << sizeof(structSecond.Bool) << " - " << &structSecond.Bool << "\n";
     cout << "Size - short: " << sizeof(structSecond.Short) << " - " << &structSecond.Short << "\n";
     cout << "Size - int: " << sizeof(structSecond.Int) << " - " << &structSecond.Int << "\n";
     cout << "Size - double: " << sizeof(structSecond.Double) << " - " << &structSecond.Double << "\n";
@@ -61,7 +62,7 @@ int main(){
 
     StructThird structThird;
     cout << "Struct 3:\n";
-    cout << "Size - char: " << sizeof(structThird.Char) << " - " << &structThird.Char << "\n";
+    cout << "Size - bool: " << sizeof(structThird.Bool) << " - " << &structThird.Bool << "\n";
     cout << "Size - short: " << sizeof(structThird.Short) << " - " << &structThird.Short << "\n";
     cout << "Size - int: " << sizeof(structThird.Int) << " - " << &structThird.Int << "\n";
     cout << "Size - double: " << sizeof(structThird.Double) << " - " << &structThird.Double << "\n";
@@ -69,7 +70,7 @@ int main(){
 
     StructFourth structFourth;
     cout << "Struct 4:\n";
-    cout << "Size - char: " << sizeof(structFourth.Char) << " - " << &structFourth.Char << "\n";
+    cout << "Size - bool: " << sizeof(structFourth.Bool) << " - " << &structFourth.Bool << "\n";
     cout << "Size - short: " << sizeof(structFourth.Short) << " - " << &structFourth.Short << "\n";
     cout << "Size - int: " << sizeof(structFourth.Int) << " - " << &structFourth.Int << "\n";
     cout << "Size - double: " << sizeof(structFourth.Double) << " - " << &structFourth.Double << "\n";
